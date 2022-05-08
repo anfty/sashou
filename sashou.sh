@@ -10,8 +10,8 @@
 
 ## 通常修改网卡与宽带参数即可联网
 ## account 宽带账号，passwd 宽带账号对应密码
-account="account"
-passwd="password"
+account="your.account"
+passwd="your.password"
 
 ## 网卡
 network_card="wlan"
@@ -65,14 +65,14 @@ do
 			echo "		-s : 设置超时时间"
 			echo "		-n : 网卡名"
 			echo "		example sashou.sh -a 12345678901 -p 12345678 -u 192.168.8.1 -s 1 -n wlan"
-			echo "		github:https://github.com/anfty"
+			echo "		https://github.com/anfty/sashou"
 			exit 1;;
 	esac
 done
 
 
 
-b='http://110.188.66.35:801/eportal/?c=Portal&a=login&callback='$dr'&login_method=1&user_account=%2C0%2C'$account'&user_password='$passwd'&wlan_user_ip='$user_ip'&wlan_user_ipv6=&wlan_user_mac=000000000000&wlan_ac_ip=&wlan_ac_name=&jsVersion=3.1&_='
+url='http://110.188.66.35:801/eportal/?c=Portal&a=login&callback='$dr'&login_method=1&user_account=%2C0%2C'$account'&user_password='$passwd'&wlan_user_ip='$user_ip'&wlan_user_ipv6=&wlan_user_mac=000000000000&wlan_ac_ip=&wlan_ac_name=&jsVersion=3.1&_='
 
-respans=$(curl -s $b --connect-timeout $s)
+respans=$(curl -s $url --connect-timeout $s)
 echo $respans
