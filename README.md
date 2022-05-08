@@ -22,7 +22,6 @@ sashou是一个适用于linux系统的校园网登录工具，目前只是一个
 
 ## sashou能做什么
 
-
 - 通过构建的GET请求登录宽带账号
 - 搭配crontab/rclocal可完成无感校园网认证
 
@@ -31,6 +30,18 @@ sashou是一个适用于linux系统的校园网登录工具，目前只是一个
 - gui
 - 运行在其他平台
 
+## 如何使用
+
+```
+SASHOU automatic authentication script
+		-a : 宽带账号
+		-p : 宽带密码
+		-u : ap分配的ip
+		-s : 设置超时时间
+		-n : 网卡名
+example:
+        sashou.sh -a 12345678901 -p 12345678 -u 192.168.8.1 -s 1 -n wlan
+```
 ## 未来
 
 作者想其他学校的校园网认证方式，制作一个全平台的自动登录工具。  
