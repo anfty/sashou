@@ -23,12 +23,10 @@ sashou是一个适用于linux系统的校园网登录工具，目前只是一个
 ## sashou能做什么
 
 - 通过构建的GET请求登录宽带账号
-- 搭配crontab/rclocal可完成无感校园网认证
-
-//建设中
+- 无感校园网认证
 - 实时检测网络状态/断网重连
-- gui
 - 运行在其他平台
+- route网络异常日志
 
 ## 如何使用
 
@@ -41,6 +39,8 @@ SASHOU automatic authentication script
 		-n : 网卡名
 example:
         sashou.sh -a 12345678901 -p 12345678 -u 192.168.8.1 -s 1 -n wlan
+
+tip:建议直接添加到rc.local文件里
 ```
 ## 未来
 
